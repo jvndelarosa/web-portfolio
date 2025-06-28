@@ -17,6 +17,7 @@ Institution: Catanduanes State University
 Graduation Year: 2022
 
 ## 📬 Contact
-Email: jovanneddelarosa@gmail.com
-LinkedIn: https://www.linkedin.com/in/jovanne-dela-rosa/
+- 📧 Email: jovanneddelarosa@gmail.com
+- 🧑‍💼 LinkedIn: https://www.linkedin.com/in/jovanne-dela-rosa/
+- 🗂️ GitHub: https://github.com/jvndelarosa
 Feel free to connect with me! I'm always open to collaboration and new opportunities.
