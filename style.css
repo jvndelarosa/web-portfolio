@@ -130,29 +130,46 @@ body {
 }
 
 /* Hero Right */
+
 .hero-right {
-  flex: 1 1 300px;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
 }
 
 .image-container {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #3f72ff33, #3f72ff00);
+  width: 420px;  /* was 340px */
+  height: 470px; /* was 380px */
+  background: radial-gradient(circle, #3f72ff30, #3f72ff10);
+  border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;
+  box-shadow: 0 0 50px rgba(63, 114, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(10, 10, 10, 0.6));
+  pointer-events: none;
 }
 
 .image-container img {
   width: 100%;
-  border-radius: 50%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 50%; /* or remove if you want full bleed */
 }
+
 
 /* Section Styling (About, Services, etc.) */
 .section {
@@ -513,5 +530,12 @@ button:hover {
   .flip-front h3,
   .flip-back p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: 300px;
+    height: 340px;
   }
 }
