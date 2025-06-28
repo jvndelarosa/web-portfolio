@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Jovanne Dela Rosa | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <div class="logo">
+  <img src="images/logo.png" alt="Logo" />
+</div>
+      <ul class="nav-links">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" >Services</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+<section class="section">
+  <h2>My Portfolio</h2>
+  <div class="flip-card-container">
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="icon">📦</div>
+          <h3>Inventory System</h3>
+        </div>
+        <div class="flip-back">
+          <p>Built in .NET Core, featuring real-time stock management and SQL database integration.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="icon">🔐</div>
+          <h3>Secure API Gateway</h3>
+        </div>
+        <div class="flip-back">
+          <p>Designed OAuth2-protected APIs with Apigee, deployed on Google Cloud Platform.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="icon">📈</div>
+          <h3>Analytics Dashboard</h3>
+        </div>
+        <div class="flip-back">
+          <p>Created with React + Chart.js, visualizing real-time API usage and performance logs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="icon">💳</div>
+          <h3>Payment Integration</h3>
+        </div>
+        <div class="flip-back">
+          <p>Integrated Stripe API with backend to process payments securely and generate receipts.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jovanne Dela Rosa | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+<section class="section contact-section">
+  <h2>Get in Touch</h2>
+  <p>Feel free to reach out via the form below — I'll get back to you as soon as possible.</p>
+
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+    </div>
+    <input type="text" name="subject" placeholder="Subject" required />
+    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+    <input type="hidden" name="time" id="currentTime" />
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize EmailJS
+      emailjs.init("fcETiawiPk06388D7"); // <-- Replace this with your EmailJS public key
+
+      // Inject current time
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.getElementById("currentTime").value = new Date().toLocaleString();
+
+        emailjs.sendForm("service_kb7um6o", "template_w61opge", this)
+          .then(() => {
+            alert("✅ Thank you! Your message has been sent.");
+            form.reset();
+          })
+          .catch((error) => {
+            alert("❌ Oops! Something went wrong.");
+            console.error("EmailJS Error:", error);
+          });
+      });
+    });
+  </script>
+</body>
+</html>
